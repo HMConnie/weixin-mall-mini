@@ -1,0 +1,46 @@
+<!--pages/collect/collect.wxml-->
+<Tabs tabs="{{tabs}}" bindtabtap="tabTap">
+    <block wx:if="{{tabs[0].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[1].checked}}">
+        <block wx:if="{{collectData.collectGoods.length >0 }}">
+            <navigator url="../../pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" wx:for="{{collectData.collectGoods}}"
+                wx:key="goods_id">
+                <view class="tab_container">
+                    <view class="goods_image">
+                        <image
+                            src="{{item.goods_small_logo == '' ? '../../image/default_image.png' : item.goods_small_logo }}"
+                            mode="widthFix"></image>
+                    </view>
+                    <view class="goods_content">
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">¥{{item.goods_price}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </block>
+        <block wx:elif="{{collectData.collectGoods ===undefined || collectData.collectGoods.length ===0}}">
+            <view class="no_data">
+                <image src="../../image/no_data.png" mode="widthFix"></image>
+                <view class="no_data_text">暂无数据~</view>
+            </view>
+        </block>
+       
+    </block>
+    <block wx:if="{{tabs[2].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[3].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+</Tabs>

@@ -1,0 +1,171 @@
+.user {
+    position: relative;
+    height  : 65vw;
+
+    .user_avatar {
+        display        : flex;
+        height         : 60vw;
+        justify-content: center;
+        align-items    : center;
+        position       : relative;
+        overflow       : hidden;
+
+        .bg_avatar {
+            width : 100%;
+            height: 100%;
+            filter: blur(5rpx);
+        }
+
+        .avatar {
+            position       : absolute;
+            left           : 50%;
+            top            : 20%;
+            transform      : translateX(-50%);
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            align-items    : center;
+
+            image {
+                width        : 20vw;
+                height       : 20vw;
+                border-radius: 10vw;
+            }
+
+            .user_nickname {
+                color      : #000;
+                font-size  : 32rpx;
+                font-weight: 200;
+                margin-top : 20rpx;
+                color      : white;
+
+            }
+
+            button {
+                margin-top      : 20rpx;
+                transform       : scale(0.6, 0.6);
+                background-color: var(--themeColor);
+                color           : white;
+
+            }
+        }
+    }
+
+    .collect_tab {
+        position        : absolute;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        height          : 90rpx;
+        left            : 20rpx;
+        bottom          : 0;
+        right           : 20rpx;
+        background-color: white;
+        border-radius   : 15rpx;
+        /*语法box-shadow：x-shadow水平偏移值  y-shadow垂直偏移值  blur阴影半径  spread扩展半径  color颜色  inset内阴影;*/
+
+        box-shadow: 0 0 0 2rpx rgba(0, 0, 0, .1);
+
+        .collect_item {
+            flex           : 1;
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            align-items    : center;
+
+            .collect_num {
+                color      : var(--themeColor);
+                font-size  : 32rpx;
+                font-weight: 500;
+            }
+
+            .collect_name {
+                font-size: 28rpx;
+            }
+        }
+    }
+}
+
+.user_order {
+    background-color: white;
+    padding         : 20rpx;
+
+    margin: 20rpx;
+    /*语法box-shadow：x-shadow水平偏移值  y-shadow垂直偏移值  blur阴影半径  spread扩展半径  color颜色  inset内阴影;*/
+
+    box-shadow   : 0 0 0 2rpx rgba(0, 0, 0, .1);
+    border-radius: 15rpx;
+
+    .order_title {
+        font-size: 32rpx;
+    }
+
+    .order_line {
+        width           : 100%;
+        height          : 1rpx;
+        background-color: #ccc;
+        opacity         : 0.5;
+        margin-top      : 20rpx;
+        margin-bottom   : 20rpx;
+    }
+
+    .order_wrap {
+        display      : flex;
+        justify-items: center;
+        align-items  : center;
+
+        .order_item {
+            display        : flex;
+            flex           : 1;
+            flex-direction : column;
+            justify-content: center;
+            align-items    : center;
+
+
+            .order_name {
+                font-size: 28rpx;
+            }
+        }
+    }
+
+
+}
+
+.user_other {
+    .other_items {
+        margin: 20rpx;
+
+        .other_item {
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-between;
+            align-content  : space-between;
+
+            .other_item_wrap {
+                display        : flex;
+                justify-content: space-between;
+                padding        : 10rpx 20rpx;
+
+                .other_left {
+                    font-size: 32rpx;
+                }
+
+                .other_right {
+                    font-size: 32rpx;
+                }
+            }
+
+
+            .other_line {
+                width           : 100%;
+                height          : 1rpx;
+                background-color: #ccc;
+                opacity         : 0.5;
+                margin-top      : 10rpx;
+                margin-bottom   : 10rpx;
+                z-index         : 1;
+            }
+        }
+    }
+
+}

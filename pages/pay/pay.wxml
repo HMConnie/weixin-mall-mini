@@ -1,0 +1,43 @@
+<view class="cart_address">
+    
+        <view class="address_content">
+            <view class="address_name">
+                <view class="people">收货人:{{collectAddress.userName}}</view>
+                <view class="tel_number">{{collectAddress.telNumber}}</view>
+            </view>
+            <view class="adddress_detail">
+                {{collectAddress.provinceName +collectAddress.cityName+collectAddress.countyName+collectAddress.detailInfo }}
+            </view>
+        </view>
+    
+</view>
+
+    <view class="cart_content">
+        <view class="cart_title">商品列表</view>
+        <view class="cart_list" wx:for="{{cartList}}" wx:key="goods_id">
+            <view class="goods_image">
+                <image src="{{item.image ===''?'../../image/default_image.png':item.image}}" mode="widthFix" />
+            </view>
+            <view class="cart_info">
+                <view class="goods_name">{{item.name}}</view>
+                <view class="goods_info">
+                    <view class="goods_price">¥{{item.price}}</view>
+                    <view class="goods_num">
+                        <view class="num">X {{item.num}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+<view class="bottom">
+    <view class="total">
+        <view class="total_price">
+            <view class="total_text">合计:</view>
+            <view class="price_amount"> ¥ {{totalAmount.totalPrice}}</view>
+        </view>
+        <view class="freight">包含运费</view>
+    </view>
+    <view bindtap="weixinPay" class="btn_settlement {{totalAmount.checkCount===0 ? 'btn_without_goods':''}}">支付({{totalAmount.checkCount}})
+    </view>
+</view>

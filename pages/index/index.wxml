@@ -1,0 +1,43 @@
+<view class="content">
+	<SearchInput />
+	<view class="content_container">
+		<!-- banner -->
+		<view>
+			<swiper class="banner_swiper" autoplay interval="2000" circular indicator-dots indicator-color="#fff" indicator-active-color="var(--themeColor)">
+				<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+					<navigator url="../goods_detail/goods_detail?goods_id={{item.goods_id}}" open-type="navigate">
+						<image class="banner_image" mode="widthFix" src="{{item.image_src}}" />
+					</navigator>
+				</swiper-item>
+			</swiper>
+		</view>
+		<!-- 导航分类 -->
+		<view class="cat_view">
+			<navigator url="../category/category" open-type="switchTab" class="cat_nav" wx:for="{{catList}}" wx:key="name">
+				<image src="{{item.image_src}}" mode="aspectFit" />
+			</navigator>
+		</view>
+		<!-- 楼层列表 -->
+		<view wx:for="{{floorList}}" wx:key="{{item.floor_title.name}}">
+			<view class="floor_title">
+				<image src="{{item.floor_title.image_src}}" mode="aspectFill" />
+			</view>
+			<view class="floor_content">
+				<view class="floor_small">
+					<image src="{{item.product_list[0].image_src}}" mode="aspectFill" data-parent-index="{{index}}" data-image-index="{{0}}" bindtap="floorImageTap"/>
+				</view>
+				<view class="floor_big">
+					<view class="floor_big_image">
+						<image src="{{item.product_list[1].image_src}}" mode="scaleToFill" data-parent-index="{{index}}" data-image-index="{{1}}" bindtap="floorImageTap"/>
+						<image src="{{item.product_list[2].image_src}}" mode="scaleToFill" data-parent-index="{{index}}" data-image-index="{{2}}" bindtap="floorImageTap" />
+					</view>
+					<view class="floor_big_image">
+						<image src="{{item.product_list[3].image_src}}" mode="scaleToFill" data-parent-index="{{index}}" data-image-index="{{3}}" bindtap="floorImageTap"/>
+						<image src="{{item.product_list[4].image_src}}" mode="scaleToFill" data-parent-index="{{index}}" data-image-index="{{4}}" bindtap="floorImageTap"/>
+					</view>
+
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

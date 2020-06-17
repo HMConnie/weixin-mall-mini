@@ -1,0 +1,25 @@
+<view class="category">
+   <SearchInput />
+   <view class="category_container">
+      <!-- 左侧菜单 -->
+      <scroll-view class="cate_left_menu" scroll-y="{{true}}">
+         <view class="cat_left {{item.checked ? 'cat_left_checked' : ''}} " wx:for="{{categoryList}}" wx:key="cat_id" bindtap="categoryTap" data-opration="{{index}}">
+            {{item.cat_name}}
+         </view>
+      </scroll-view>
+      <!-- 右侧菜单内容 -->
+      <scroll-view class="cate_right_menu" scroll-y="{{true}}" scroll-top="{{scrollTop}}">
+         <view class="cat_content" wx:for="{{contentList}}" wx:key="cat_id">
+            <view class="content_title">\{{item.cat_name}}\</view>
+            <view class="content_child_container">
+               <view class="content_child" wx:for="{{item.children}}" wx:key="cat_id" wx:for-item="itemChild" wx:for-index="childIndex">
+                  <navigator url="../goods_list/goods_list?cat_id={{itemChild.cat_id}}">
+                     <image class="content_child_image" src="{{itemChild.cat_icon}}" mode="widthFix"></image>
+                     <view class="content_child_text">{{itemChild.cat_name}}</view>
+                  </navigator>
+               </view>
+            </view>
+         </view>
+      </scroll-view>
+   </view>
+</view>

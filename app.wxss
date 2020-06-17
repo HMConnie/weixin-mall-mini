@@ -1,0 +1,17 @@
+/**全局配置**/
+
+/**使用阿里的iconfont图标**/
+
+@import "styles/iconfont.wxss";
+page, view, text, swiper, swiper-item, image, navigator {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+page {
+    /* 定义主题颜色 */
+    --themeColor: #eb4450;
+    /* 375px的屏幕 1px = 2rpx */
+    font-size: 28rpx;
+}

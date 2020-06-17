@@ -1,0 +1,43 @@
+.no_data {
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no_data image {
+  width: 50%;
+}
+.no_data .no_data_text {
+  font-size: 32rpx;
+  color: #ccc;
+}
+.tab_container {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+}
+.tab_container .goods_image {
+  flex: 1;
+}
+.tab_container .goods_image image {
+  width: 100%;
+  height: 200rpx;
+}
+.tab_container .goods_content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+.tab_container .goods_content .goods_name {
+  width: 100%;
+  font-size: 26rpx;
+  color: #000;
+}
+.tab_container .goods_content .goods_price {
+  font-size: 26rpx;
+  color: var(--themeColor);
+}

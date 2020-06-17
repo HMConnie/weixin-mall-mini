@@ -1,0 +1,14 @@
+.no_data {
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no_data image {
+  width: 50%;
+}
+.no_data .no_data_text {
+  font-size: 32rpx;
+  color: #ccc;
+}

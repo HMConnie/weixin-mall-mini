@@ -1,0 +1,26 @@
+<Tabs tabs="{{tabs}}" bindtabtap="tabTap">
+    <block wx:if="{{tabs[0].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[1].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[2].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[3].checked}}">
+        <view class="no_data">
+            <image src="../../image/no_data.png" mode="widthFix"></image>
+            <view class="no_data_text">暂无数据~</view>
+        </view>
+    </block>
+</Tabs>

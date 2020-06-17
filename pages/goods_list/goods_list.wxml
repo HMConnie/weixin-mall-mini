@@ -1,0 +1,22 @@
+<SearchInput />
+<Tabs tabs="{{tabs}}" bindtabtap="tabTap">
+<block wx:if="{{tabs[0].checked}}">
+<navigator url="../../pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" wx:for="{{goodsList}}" wx:key="cat_id">
+	<view class="tab_container">
+		<view class="goods_image">
+			<image src="{{item.goods_small_logo == '' ? '../../image/default_image.png' : item.goods_small_logo }}" mode="widthFix"></image>
+		</view>
+		<view class="goods_content">
+			<view class="goods_name">{{item.goods_name}}</view>
+			<view class="goods_price">¥{{item.goods_price}}</view>
+		</view>
+	</view>
+</navigator>
+</block>
+<block wx:elif="{{tabs[1].checked}}">
+2
+</block>
+<block wx:elif="{{tabs[2].checked}}">
+3
+</block>
+</Tabs>
